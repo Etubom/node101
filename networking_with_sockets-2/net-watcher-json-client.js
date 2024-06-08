@@ -7,7 +7,7 @@ client.on('data',data => {
     if(message.type === 'watching'){
         console.log(`Now watching: ${message.file}`);
     } else if (message.type === 'changed'){
-        const date = new Date(message.timestamp);
+        const date = new Date(message.timeStamp);
         console.log(`File changed: ${date.toString()}`);
     }else {
         console.log(`Unrecognized message type: ${message.type}`);
